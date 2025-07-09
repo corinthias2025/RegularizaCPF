@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Serasa Limpa Nome - Negociação de Dívidas com Descontos Exclusivos</title>
+    <meta name="description" content="Negocie suas dívidas com até 80% de desconto e limpe seu nome no Serasa. Parcelamento em até 12x e atendimento 100% online.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E5B96;
+            --primary-light: #4A7BB9;
+            --secondary: #FF6B00;
+            --secondary-light: #FF8A33;
+            --light: #F8FAFD;
+            --light-gray: #EFF3F9;
+            --dark: #2D3748;
+            --gray: #718096;
+            --success: #38A169;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #128C7E;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        html {
+            font-size: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+            width: 100%;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.25rem 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-size: 1.375rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+        
+        .highlight {
+    color: #FFD700; /* Dourado para mais destaque */
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para melhor legibilidade */
+}
+        
+        /* Card Principal */
+        .main-card {
+            max-width: 800px;
+            margin: 1.5rem auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        /* Formulário */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 0.9375rem;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius-sm);
+            font-size: 0.9375rem;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            background-color: var(--light);
+        }
+        
+        input[type="text"]:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 91, 150, 0.2);
+        }
+        
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        /* Botões */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--secondary), var(--secondary-light));
+            color: white;
+            border: none;
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(to right, var(--secondary-light), var(--secondary));
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Benefícios */
+        .benefits {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            background: var(--light-gray);
+            padding: 1.25rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .benefit-icon {
+            color: var(--success);
+            margin-right: 0.875rem;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .benefit-text {
+            font-size: 0.875rem;
+            color: var(--dark);
+            line-height: 1.5;
+        }
+        
+        /* Popups */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+        }
+        
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .popup-content {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(20px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .popup-overlay.active .popup-content {
+            transform: translateY(0);
+        }
+        
+        .popup-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .popup-title {
+            color: var(--primary);
+            margin: 0.75rem 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .popup-message {
+            margin: 1.25rem 0;
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 0.9375rem;
+        }
+        
+        .discount-badge {
+            background: linear-gradient(to right, var(--secondary), var(--secondary-light));
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-sm);
+            margin: 0.5rem 0;
+        }
+        
+        .debt-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 1.25rem 0;
+            padding: 1rem;
+            background-color: var(--light-gray);
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .debt-value span {
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+        
+        .popup-actions {
+            margin-top: 1.5rem;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.625rem;
+            background-color: var(--whatsapp);
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .whatsapp-btn svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        
+        .close-popup {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            line-height: 1;
+        }
+        
+        .close-popup:hover {
+            color: var(--primary);
+            background-color: var(--light-gray);
+        }
+        
+        /* Loading Popup */
+        .loading-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+        }
+        
+        .loading-popup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .loading-content {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        .loading-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .loading-title {
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            font-size: 1.375rem;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: var(--light-gray);
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 5s linear;
+            border-radius: 50px;
+        }
+        
+        .loading-text {
+            font-size: 0.9375rem;
+            color: var(--gray);
+        }
+        
+        .spinner {
+            width: 45px;
+            height: 45px;
+            border: 5px solid var(--light-gray);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.25rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: var(--gray);
+            font-size: 0.8125rem;
+            background-color: white;
+            margin-top: 2rem;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        /* Novos estilos para a oferta PIX */
+        .pix-offer {
+            margin: 1.25rem 0;
+            padding: 1.25rem;
+            background-color: var(--light-gray);
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--success);
+        }
+        
+        .pix-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--success);
+            margin-bottom: 0.875rem;
+        }
+        
+        .pix-price {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.875rem;
+            flex-wrap: wrap;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+        
+        .new-price {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+        
+        .pix-code-container {
+            position: relative;
+            margin: 0.875rem 0;
+        }
+
+        .pix-code {
+            background-color: white;
+            padding: 0.875rem;
+            border-radius: var(--radius-sm);
+            font-family: monospace;
+            word-break: break-all;
+            font-size: 0.8125rem;
+            border: 1px dashed var(--gray);
+            line-height: 1.5;
+        }
+        
+        .copy-pix-btn {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            padding: 0.875rem;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .copy-pix-btn:hover {
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .copy-success {
+            position: absolute;
+            top: -8px;
+            right: 8px;
+            background-color: var(--success);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50px;
+            font-size: 0.6875rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .copy-success.show {
+            opacity: 1;
+        }
+
+        /* Novo estilo para as instruções do PIX */
+        .pix-instructions {
+            display: none;
+            background-color: white;
+            border-radius: var(--radius-sm);
+            padding: 1.25rem;
+            margin-top: 1.25rem;
+            border: 1px solid var(--primary-light);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .pix-instructions.active {
+            display: block;
+        }
+
+        .pix-instructions h4 {
+            color: var(--primary);
+            margin-bottom: 0.875rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .pix-steps {
+            margin-bottom: 1.25rem;
+            padding-left: 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        .pix-steps li {
+            margin-bottom: 0.625rem;
+            line-height: 1.5;
+        }
+
+        .pix-apps {
+            display: flex;
+            justify-content: center;
+            gap: 0.875rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .pix-app {
+            background-color: var(--light-gray);
+            border-radius: var(--radius-sm);
+            padding: 0.625rem 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8125rem;
+            min-width: 90px;
+            justify-content: center;
+        }
+
+        .pix-app-icon {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Micro-interações */
+        .hover-scale {
+            transition: var(--transition);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        /* Melhorias de Responsividade */
+        @media (max-width: 768px) {
+            :root {
+                font-size: 15px;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .main-card {
+                padding: 1.25rem;
+                margin: 1.25rem auto;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .popup-content, .loading-content {
+                padding: 1.25rem;
+            }
+            
+            .whatsapp-btn {
+                padding: 0.875rem 1.25rem;
+            }
+            
+            .pix-offer {
+                padding: 1rem;
+            }
+            
+            .pix-code {
+                font-size: 0.75rem;
+                padding: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .main-card {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+            
+            .popup-title {
+                font-size: 1.375rem;
+            }
+            
+            .debt-value {
+                font-size: 1.125rem;
+                padding: 0.875rem;
+            }
+            
+            .debt-value span {
+                font-size: 1.375rem;
+            }
+            
+            .discount-badge {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .new-price {
+                font-size: 1.25rem;
+            }
+            
+            .pix-apps {
+                gap: 0.5rem;
+            }
+            
+            .pix-app {
+                min-width: 80px;
+                padding: 0.5rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            :root {
+                font-size: 13px;
+            }
+            
+            h1 {
+                font-size: 1.375rem;
+            }
+            
+            .pix-price {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="fade-in">
+        <div class="container">
+            <h1>Negocie suas dívidas com o <span class="highlight">Serasa Limpa Nome</span></h1>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="main-card hover-scale">
+            <h2>Ofertas exclusivas e parcelamento facilitado</h2>
+            <p>Preencha seu CPF abaixo para consultar condições especiais para regularizar seu nome.</p>
+            
+            <form id="debtForm">
+                <div class="form-group">
+                    <label for="cpf">Digite seu CPF</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                        <span class="input-icon">📝</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Consultar Ofertas</button>
+            </form>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span class="benefit-text">Descontos de até 90% no valor total da sua dívida</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span class="benefit-text">Parcelamento em até 12x no cartão ou boleto</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span class="benefit-text">Retirada do seu nome em até 48 horas</span>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span class="benefit-text">Atendimento 100% online e sem burocracia</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Popup de Carregamento -->
+    <div class="loading-popup" id="loadingPopup">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2 class="loading-title">Analisando suas dívidas...</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="loading-text">Estamos buscando as melhores ofertas para você</p>
+        </div>
+    </div>
+    
+    <!-- Popup de Oferta PIX -->
+    <div class="popup-overlay" id="offerPopup">
+        <div class="popup-content hover-scale">
+            <button class="close-popup" id="closePopup">&times;</button>
+            <h2 class="popup-title">OFERTA IMPERDÍVEL!</h2>
+            <div class="discount-badge">83% DE DESCONTO</div>
+            
+            <div class="pix-offer">
+                <div class="pix-title">PAGAMENTO VIA PIX</div>
+                <div class="pix-price">
+                    <span class="old-price">De: R$ 599,00</span>
+                    <span class="new-price">Por: R$ 99,90</span>
+                </div>
+                <p>Copie o código PIX abaixo e pague agora mesmo para garantir seu desconto:</p>
+                
+                <div class="pix-code-container">
+                    <div class="pix-code" id="pixCode">
+                        00020101021226830014BR.GOV.BCB.PIX2561qrcodespix.sejaefi.com.br/v2/5c8e4c7c27b94709bc4cc446a1e401025204000053039865802BR5905EFISA6008SAOPAULO62070503***6304CBD9
+                    </div>
+                    <div class="copy-success" id="copySuccess">Copiado!</div>
+                </div>
+                
+                <button class="copy-pix-btn" id="copyPixBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    COPIAR CÓDIGO PIX
+                </button>
+
+                <!-- Card de Instruções do PIX (inicialmente oculto) -->
+                <div class="pix-instructions" id="pixInstructions">
+                    <h4>Como pagar com PIX Copia e Cola:</h4>
+                    <ol class="pix-steps">
+                        <li>Abra o aplicativo do seu banco ou instituição financeira</li>
+                        <li>Na área PIX, selecione a opção "Pagar com PIX Copia e Cola"</li>
+                        <li>Cole o código que você acabou de copiar</li>
+                        <li>Confira os dados e confirme o pagamento</li>
+                        <li>Pronto! Seu nome será regularizado em até 48h após confirmação</li>
+                    </ol>
+
+                    <div class="pix-apps">
+                        <div class="pix-app">
+                            <span class="pix-app-icon">B</span>
+                            Banco do Brasil
+                        </div>
+                        <div class="pix-app">
+                            <span class="pix-app-icon">I</span>
+                            Itaú
+                        </div>
+                        <div class="pix-app">
+                            <span class="pix-app-icon">C</span>
+                            Caixa
+                        </div>
+                        <div class="pix-app">
+                            <span class="pix-app-icon">N</span>
+                            Nubank
+                        </div>
+                        <div class="pix-app">
+                            <span class="pix-app-icon">P</span>
+                            PicPay
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="popup-message">
+                <strong>Oferta válida apenas por hoje!</strong> Após o pagamento, seu nome será regularizado em até 48 horas.
+            </p>
+        </div>
+    </div>
+    
+    <footer class="fade-in">
+        <div class="container">
+            <p>Serasa © 2025 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Máscara para CPF
+        document.getElementById('cpf').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 3) {
+                value = value.substring(0, 3) + '.' + value.substring(3);
+            }
+            if (value.length > 7) {
+                value = value.substring(0, 7) + '.' + value.substring(7);
+            }
+            if (value.length > 11) {
+                value = value.substring(0, 11) + '-' + value.substring(11);
+            }
+            
+            e.target.value = value.substring(0, 14);
+        });
+        
+        // Controle do Popup
+        const form = document.getElementById('debtForm');
+        const loadingPopup = document.getElementById('loadingPopup');
+        const offerPopup = document.getElementById('offerPopup');
+        const closeBtn = document.getElementById('closePopup');
+        const progressBar = document.getElementById('progressBar');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostra o popup de carregamento
+            loadingPopup.classList.add('active');
+            
+            // Inicia a barra de progresso
+            progressBar.style.width = '100%';
+            
+            // Temporizador para mostrar a oferta após 5 segundos
+            setTimeout(function() {
+                loadingPopup.classList.remove('active');
+                offerPopup.classList.add('active');
+                
+                // Reseta a barra de progresso para próxima vez
+                setTimeout(() => {
+                    progressBar.style.width = '0%';
+                    progressBar.style.transition = 'none';
+                    void progressBar.offsetWidth; // Trigger reflow
+                    progressBar.style.transition = 'width 5s linear';
+                }, 300);
+                
+            }, 5000); // 5 segundos
+        });
+        
+        // Copiar código PIX e mostrar instruções
+        document.getElementById('copyPixBtn').addEventListener('click', function() {
+            const pixCodeElement = document.getElementById('pixCode');
+            const textToCopy = pixCodeElement.textContent.trim();
+            
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                const copySuccess = document.getElementById('copySuccess');
+                copySuccess.classList.add('show');
+                
+                // Mostra as instruções do PIX
+                const pixInstructions = document.getElementById('pixInstructions');
+                pixInstructions.classList.add('active');
+                
+                setTimeout(function() {
+                    copySuccess.classList.remove('show');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Erro ao copiar: ', err);
+                alert('Não foi possível copiar o código. Por favor, selecione e copie manualmente.');
+            });
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            offerPopup.classList.remove('active');
+            // Esconde as instruções quando o popup é fechado
+            document.getElementById('pixInstructions').classList.remove('active');
+        });
+        
+        // Fechar popup ao clicar fora do conteúdo
+        offerPopup.addEventListener('click', function(e) {
+            if (e.target === offerPopup) {
+                offerPopup.classList.remove('active');
+                // Esconde as instruções quando o popup é fechado
+                document.getElementById('pixInstructions').classList.remove('active');
+            }
+        });
+        
+        loadingPopup.addEventListener('click', function(e) {
+            if (e.target === loadingPopup) {
+                // Não permite fechar o popup de carregamento clicando fora
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+        
+        // Animações ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = 1;
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
