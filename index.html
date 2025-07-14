@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oferta Serasa</title>
+  <style>
+    :root {
+      --rosa-principal: #ec008c;
+      --rosa-escuro: #c20074;
+      --texto-claro: #ffffff;
+      --texto-cinza: #f0f0f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--rosa-principal);
+      color: var(--texto-claro);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      zoom: 1.1;
+    }
+
+    .card {
+      background-color: #fff;
+      color: #333;
+      max-width: 460px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 30px 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--rosa-principal);
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .preco {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .preco .antigo {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+    .preco .atual {
+      color: var(--rosa-principal);
+    }
+
+    .pix-container {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 1px dashed var(--rosa-principal);
+      border-radius: 10px;
+      word-break: break-all;
+      font-size: 13px;
+      margin: 15px 0;
+    }
+
+    .btn-copiar {
+      background-color: var(--rosa-principal);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+      margin: 10px auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-copiar:hover {
+      background-color: var(--rosa-escuro);
+    }
+
+    .copiado {
+      display: none;
+      color: green;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .instrucoes {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .instrucoes h3 {
+      color: var(--rosa-principal);
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .instrucoes ol {
+      padding-left: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      body {
+        zoom: 1;
+      }
+
+      .card {
+        padding: 25px 15px;
+      }
+
+      .pix-container {
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Limpe seu nome com desconto</h1>
+    <p class="subtitulo">Oferta exclusiva para regularização via PIX</p>
+
+    <div class="preco">
+      <span class="antigo">R$ 2.599,00</span>
+      <span class="atual">R$ 99,90</span>
+    </div>
+
+    <p>Copie o código PIX abaixo e pague agora mesmo:</p>
+    <div class="pix-container" id="pixCode">
+      00020101021226830014BR.GOV.BCB.PIX2561qrcodespix.sejaefi.com.br/v2/a939199fce9644dab1c263a6a7e3597e5204000053039865802BR5905EFISA6008SAOPAULO62070503***630458C2
+    </div>
+
+    <button class="btn-copiar" onclick="copiarPix()">
+      📋 Copiar código PIX
+    </button>
+    <div class="copiado" id="mensagemCopiado">Código copiado com sucesso!</div>
+
+    <div class="instrucoes">
+      <h3>Como pagar com PIX Copia e Cola:</h3>
+      <ol>
+        <li>Acesse o app do seu banco</li>
+        <li>Escolha "PIX Copia e Cola"</li>
+        <li>Cole o código e confirme o pagamento</li>
+        <li>Seu nome será regularizado em até 48h</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    function copiarPix() {
+      const codigo = document.getElementById("pixCode").innerText;
+      navigator.clipboard.writeText(codigo).then(() => {
+        const msg = document.getElementById("mensagemCopiado");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
