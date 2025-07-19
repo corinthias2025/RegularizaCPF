@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Limpe seu nome com desconto via PIX | Serasa</title>
+
+  <!-- SEO + Social -->
+  <meta name="description" content="Aproveite uma oferta exclusiva e regularize seu nome com desconto via PIX. Seu nome limpo em até 48 horas. Pague agora!">
+  <meta property="og:title" content="Limpe seu nome com desconto via PIX | Serasa" />
+  <meta property="og:description" content="Oferta exclusiva! Regularize seu nome com desconto via PIX. Seu nome limpo em até 48h." />
+  <meta property="og:image" content="https://files.sunoresearch.com.br/p/uploads/2020/06/serasa.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seusite.com/oferta-serasa" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Limpe seu nome com desconto via PIX | Serasa" />
+  <meta name="twitter:description" content="Oferta imperdível! Regularize sua situação financeira pagando apenas R$99,90 via PIX." />
+  <meta name="twitter:image" content="https://files.sunoresearch.com.br/p/uploads/2020/06/serasa.jpg" />
+  <link rel="icon" href="https://www.serasa.com.br/favicon.ico" type="image/x-icon" />
+
+  <style>
+    :root {
+      --rosa-principal: #ec008c;
+      --rosa-escuro: #c20074;
+      --texto-claro: #ffffff;
+      --preto-fundo: #000000;
+      --cinza-claro: #f1f1f1;
+      --cinza-escuro: #444444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: var(--rosa-principal);
+      color: var(--texto-claro);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-size: 17px;
+      line-height: 1.5;
+      user-select: none;
+    }
+
+    .card {
+      background-color: #fff;
+      color: #333;
+      max-width: 480px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      text-align: center;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--rosa-principal);
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      color: var(--cinza-escuro);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .preco {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 15px 0;
+    }
+
+    .preco .antigo {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+    .preco .atual {
+      color: var(--rosa-principal);
+    }
+
+    #cronometro {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      background-color: var(--preto-fundo);
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 15px;
+      color: var(--texto-claro);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      letter-spacing: 0.03em;
+    }
+
+    .pix-container {
+      background-color: var(--cinza-claro);
+      padding: 15px;
+      border: 1.5px dashed var(--rosa-principal);
+      border-radius: 12px;
+      font-size: 14px;
+      margin: 20px 0;
+      word-break: break-word;
+      user-select: all;
+    }
+
+    .btn-copiar {
+      background-color: var(--rosa-principal);
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-copiar:hover {
+      background-color: var(--rosa-escuro);
+    }
+
+    .btn-copiar:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .copiado {
+      display: none;
+      color: green;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .instrucoes {
+      margin-top: 25px;
+      text-align: left;
+      font-size: 14px;
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+    }
+
+    .instrucoes h3 {
+      color: var(--rosa-principal);
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .instrucoes ol {
+      padding-left: 22px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        padding: 10px;
+      }
+
+      .card {
+        padding: 25px 18px;
+      }
+
+      .logo {
+        max-width: 160px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .subtitulo {
+        font-size: 15px;
+      }
+
+      .preco {
+        font-size: 20px;
+      }
+
+      #cronometro {
+        font-size: 16px;
+        padding: 6px 14px;
+        border-radius: 12px;
+      }
+
+      .pix-container {
+        font-size: 13px;
+      }
+
+      .btn-copiar {
+        font-size: 15px;
+        padding: 12px 20px;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://nfe.io/docs/app/uploads/2021/03/Serasa-Experian-logo.jpg" alt="Logo Serasa" class="logo" />
+    <h1>Limpe seu nome com desconto</h1>
+
+    <div id="cronometro">
+      Oferta válida por: <span id="timer">30:00</span>
+    </div>
+
+    <p class="subtitulo">Oferta exclusiva para regularização via PIX</p>
+
+    <div class="preco">
+      <span class="antigo">R$ 2.599,00</span>
+      <span class="atual">R$ 99,90</span>
+    </div>
+
+    <p>Copie o código PIX abaixo e pague agora mesmo:</p>
+    <div class="pix-container" id="pixCode">
+      00020101021226830014BR.GOV.BCB.PIX2561qrcodespix.sejaefi.com.br/v2/9075531ab3cf4c7c8407399fc6c6b73c5204000053039865802BR5905EFISA6008SAOPAULO62070503***63044D55
+    </div>
+
+    <button class="btn-copiar" onclick="copiarPix()">📋 Copiar código PIX</button>
+    <div class="copiado" id="mensagemCopiado">Código copiado com sucesso!</div>
+
+    <div class="instrucoes">
+      <h3>Como pagar com PIX Copia e Cola:</h3>
+      <ol>
+        <li>Acesse o app do seu banco</li>
+        <li>Escolha "PIX Copia e Cola"</li>
+        <li>Cole o código e confirme o pagamento</li>
+        <li>Seu nome será regularizado em até 48h</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    // Cronômetro regressivo
+    function iniciarCronometro(duracao, display) {
+      let timer = duracao, minutos, segundos;
+      const intervalo = setInterval(function () {
+        minutos = parseInt(timer / 60, 10);
+        segundos = parseInt(timer % 60, 10);
+
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        display.textContent = minutos + ":" + segundos;
+
+        if (--timer < 0) {
+          clearInterval(intervalo);
+          display.parentElement.innerHTML = "<span style='color:#cc0000; font-weight:bold;'>⛔ Tempo esgotado. A oferta expirou!</span>";
+          const btnCopiar = document.querySelector('.btn-copiar');
+          btnCopiar.disabled = true;
+          btnCopiar.style.opacity = 0.5;
+        }
+      }, 1000);
+    }
+
+    // Copiar código PIX
+    function copiarPix() {
+      const codigo = document.getElementById("pixCode").innerText;
+      navigator.clipboard.writeText(codigo).then(() => {
+        const msg = document.getElementById("mensagemCopiado");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2500);
+      }).catch(() => {
+        alert("Não foi possível copiar o código PIX. Por favor, copie manualmente.");
+      });
+    }
+
+    // Inicia o cronômetro automaticamente
+    window.onload = function() {
+      iniciarCronometro(60 * 30, document.getElementById("timer")); // 30 minutos
+    }
+  </script>
+</body>
+</html>
